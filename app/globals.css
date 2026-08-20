@@ -131,7 +131,7 @@ a{color:inherit}
   text-shadow:0 6px 60px rgba(11,9,8,.6);
 }
 .hero__name .bang{color:var(--ember)}
-.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(30px,4.4vh,46px)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(48px,7vh,82px)}
 
 .statsrow{
   display:grid;grid-template-columns:repeat(4,1fr);
