@@ -7,9 +7,9 @@ export default function Page() {
       <nav className="nav">
         <a className="mark" href="#top">High-Up<i>!</i></a>
         <div className="nav__links">
+          <a href="#weekend">The weekend</a>
           <a href="#what">The event</a>
           <a href="#why">Why High-Up!</a>
-          <a href="#weekend">The weekend</a>
           <a href="#join">Join</a>
           <a href="#faq">FAQ</a>
         </div>
@@ -32,8 +32,6 @@ export default function Page() {
             <span>Aalto University, Espoo</span>
           </div>
           <h1 className="hero__name">High-Up<span className="bang">!</span></h1>
-          <p className="d hero__tag">500+ high schoolers. Two days. <span className="em">Zero permission needed.</span></p>
-          <p className="hero__sub">An official Slush side event. High-Up! brings high school students from every corner of Finland to Aalto University to build real solutions to problems they picked themselves &mdash; then puts that work in front of the people who can back it.</p>
           <div className="hero__cta">
             <a className="btn btn--fill btn--lg" href="https://calendar.app.google/y8bj6e39cszaRqpEA" target="_blank" rel="noopener noreferrer">Partner with us
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -59,6 +57,35 @@ export default function Page() {
         </div>
       </header>
 
+      <section className="sec" id="weekend">
+        <div className="wrap">
+          <div className="sec__head rv">
+            <div>
+              <span className="label">The weekend</span>
+              <h2>An official Slush side event</h2>
+            </div>
+            <p>High-Up! runs on 19&ndash;20 November, in the middle of Slush week, on the Aalto campus in Espoo. Getting there, sleeping and eating are covered. You bring yourself.</p>
+          </div>
+          <div className="amb rv">
+            <div>
+              <b>19&ndash;20 Nov</b><small>Slush week 2026</small>
+              <p>Two days on the Aalto campus in Espoo, while the whole startup world is already in town.</p>
+            </div>
+            <div>
+              <b>0 &euro;</b><small>Fully covered</small>
+              <p>Accommodation, travel and food are completely provided for every attendee.</p>
+            </div>
+            <div>
+              <b>Slush</b><small>Speakers on stage</small>
+              <p>Speakers from Slush come to talk to you, not about you.</p>
+            </div>
+            <div>
+              <b>Booths</b><small>All around campus</small>
+              <p>Startup booths and activities across the whole campus, from all over the Finnish startup scene.</p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="sec" id="what">
         <div className="wrap">
           <div className="sec__head rv">
@@ -116,35 +143,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="sec" id="weekend">
-        <div className="wrap">
-          <div className="sec__head rv">
-            <div>
-              <span className="label">The weekend</span>
-              <h2>An official Slush side event</h2>
-            </div>
-            <p>High-Up! runs on 19&ndash;20 November, in the middle of Slush week, on the Aalto campus in Espoo. Getting there, sleeping and eating are covered. You bring yourself.</p>
-          </div>
-          <div className="amb rv">
-            <div>
-              <b>19&ndash;20 Nov</b><small>Slush week 2026</small>
-              <p>Two days on the Aalto campus in Espoo, while the whole startup world is already in town.</p>
-            </div>
-            <div>
-              <b>0 &euro;</b><small>Fully covered</small>
-              <p>Accommodation, travel and food are completely provided for every attendee.</p>
-            </div>
-            <div>
-              <b>Slush</b><small>Speakers on stage</small>
-              <p>Speakers from Slush come to talk to you, not about you.</p>
-            </div>
-            <div>
-              <b>Booths</b><small>All around campus</small>
-              <p>Startup booths and activities across the whole campus, from all over the Finnish startup scene.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="sec" id="join">
         <div className="wrap">
@@ -247,13 +245,13 @@ export default function Page() {
         <div className="wrap">
           <div className="foot__top">
             <div>
-              <a className="mark mark--foot" href="#top">High<i>up</i></a>
+              <a className="mark mark--foot" href="#top">High-Up<i>!</i></a>
               <p className="foot__blurb">Getting Finnish high schoolers to solve real problems. Two days at Aalto, one shot at building something.</p>
             </div>
             <div className="foot__nav">
+              <a href="#weekend">The weekend</a>
               <a href="#what">The event</a>
               <a href="#why">Why High-Up!</a>
-              <a href="#weekend">The weekend</a>
               <a href="#join">Join</a>
               <a href="#faq">FAQ</a>
             </div>

@@ -131,14 +131,7 @@ a{color:inherit}
   text-shadow:0 6px 60px rgba(11,9,8,.6);
 }
 .hero__name .bang{color:var(--ember)}
-.hero__tag{
-  margin-top:clamp(16px,2.4vh,28px);
-  font-size:clamp(1.3rem,3.1vw,2.35rem);letter-spacing:-.032em;line-height:1.04;
-  max-width:26ch;text-shadow:0 3px 30px rgba(11,9,8,.55);
-}
-.hero__tag .em{color:var(--ember)}
-.hero__sub{margin-top:clamp(16px,2.2vh,24px);max-width:56ch;font-size:clamp(1rem,1.1vw,1.14rem);color:var(--bone-2)}
-.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(24px,3.4vh,36px)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(30px,4.4vh,46px)}
 
 .statsrow{
   display:grid;grid-template-columns:repeat(4,1fr);
