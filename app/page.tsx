@@ -11,6 +11,7 @@ export default function Page() {
           <a href="#weekend">The weekend</a>
           <a href="#what">The event</a>
           <a href="#why">Why High-Up!</a>
+          <a href="#partners">Partners</a>
           <a href="#join">Join</a>
           <a href="#faq">FAQ</a>
         </div>
@@ -145,6 +146,44 @@ export default function Page() {
       </section>
 
 
+      <section className="sec" id="partners">
+        <div className="wrap">
+          <div className="sec__head rv">
+            <div>
+              <span className="label">Backed by</span>
+              <h2>Three in. Your name next.</h2>
+            </div>
+            <p>STUHI, Aalto University and Slush are already behind High-Up!. The rest of the room is still open &mdash; and the partners who come in early shape the challenges, meet the teams first, and get named on everything that follows.</p>
+          </div>
+          <div className="plogos rv">
+            <div className="ptile"><span className="logo-stuhi logo-stuhi--tile" role="img" aria-label="STUHI"></span></div>
+            <div className="ptile"><span className="logo-aalto logo-aalto--tile" role="img" aria-label="Aalto University"></span></div>
+            <div className="ptile"><span className="logo-slush" role="img" aria-label="Slush"></span></div>
+            <a className="ptile ptile--open" href="#partner">
+              <span className="ptile__plus" aria-hidden="true">+</span>
+              <span className="ptile__label">Open</span>
+            </a>
+            <a className="ptile ptile--open" href="#partner">
+              <span className="ptile__plus" aria-hidden="true">+</span>
+              <span className="ptile__label">Open</span>
+            </a>
+            <a className="ptile ptile--open" href="#partner">
+              <span className="ptile__plus" aria-hidden="true">+</span>
+              <span className="ptile__label">Open</span>
+            </a>
+            <a className="ptile ptile--open" href="#partner">
+              <span className="ptile__plus" aria-hidden="true">+</span>
+              <span className="ptile__label">Open</span>
+            </a>
+            <a className="ptile ptile--open" href="#partner">
+              <span className="ptile__plus" aria-hidden="true">+</span>
+              <span className="ptile__label">Open</span>
+            </a>
+          </div>
+          <p className="plogos__foot rv"><span>Slots for 2026 are open now.</span><a className="mailto" href="#partner">Take one &rarr;</a></p>
+        </div>
+      </section>
+
       <section className="sec" id="join">
         <div className="wrap">
           <div className="sec__head rv">
@@ -251,6 +290,7 @@ export default function Page() {
               <a href="#weekend">The weekend</a>
               <a href="#what">The event</a>
               <a href="#why">Why High-Up!</a>
+              <a href="#partners">Partners</a>
               <a href="#join">Join</a>
               <a href="#faq">FAQ</a>
             </div>

@@ -280,3 +280,33 @@ a.mailto:hover{text-decoration:underline}
 .pform__alt{font-size:.92rem;color:var(--bone-2)}
 .pform__note{font-size:.86rem;color:var(--bone-3)}
 .pform button{cursor:pointer;font-family:var(--display)}
+
+/* ---------- partners wall ---------- */
+.plogos{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair)}
+@media (max-width:860px){.plogos{grid-template-columns:repeat(2,1fr)}}
+.ptile{
+  background:var(--ink-2);min-height:clamp(106px,11vw,148px);
+  display:grid;place-items:center;padding:clamp(18px,2.4vw,30px);
+  text-decoration:none;
+}
+.ptile--open{
+  background:var(--ink);position:relative;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6em;
+  color:var(--bone-3);transition:color .18s,background .18s;
+}
+.ptile--open::before{
+  content:"";position:absolute;inset:12px;border-radius:10px;
+  border:1px dashed rgba(243,239,225,.16);transition:border-color .18s;
+}
+.ptile--open:hover,.ptile--open:focus-visible{color:var(--ember);background:rgba(255,106,26,.05)}
+.ptile--open:hover::before,.ptile--open:focus-visible::before{border-color:rgba(255,106,26,.5)}
+.ptile__plus{font-family:var(--display);font-weight:700;font-size:1.5rem;line-height:1;color:var(--ember)}
+.ptile__label{font-family:var(--display);font-weight:700;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase}
+.plogos__foot{
+  margin-top:clamp(18px,2.4vh,26px);color:var(--bone-3);font-size:.92rem;
+  display:flex;flex-wrap:wrap;gap:.5em 1.2em;align-items:baseline;
+}
+.logo-slush{display:block;height:clamp(24px,2.7vw,33px);aspect-ratio:641/180;flex:none;
+  background:url(/slush-white.png) center/contain no-repeat}
+.logo-stuhi--tile{height:clamp(23px,2.6vw,31px)}
+.logo-aalto--tile{height:clamp(50px,5.4vw,64px)}
