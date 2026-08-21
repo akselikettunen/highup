@@ -48,8 +48,8 @@ export default function Page() {
           <div className="statsrow">
             <div className="stat"><b>500+</b><small>High schoolers</small></div>
             <div className="stat"><b>19&ndash;20 Nov</b><small>During Slush week</small></div>
-            <div className="stat"><b>All of</b><small>Finland, every region</small></div>
-            <div className="stat"><b>0 &euro;</b><small>Travel, stay and food</small></div>
+            <div className="stat"><b>13</b><small>Major cities of Finland</small></div>
+            <div className="stat"><b>Free</b><small>Travel, stay and food</small></div>
           </div>
           <div className="builtby">
             <span className="label">Built by</span>
@@ -74,7 +74,7 @@ export default function Page() {
               <p>Two days on the Aalto campus in Espoo, while the whole startup world is already in town.</p>
             </div>
             <div>
-              <b>0 &euro;</b><small>Fully covered</small>
+              <b>Free</b><small>Fully covered</small>
               <p>Accommodation, travel and food are completely provided for every attendee.</p>
             </div>
             <div>
