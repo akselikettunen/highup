@@ -303,7 +303,8 @@ export default function Page() {
           <div className="foot__bot">
             <span>&copy; 2026 High-Up! &middot; STUHI &amp; Aalto University</span>
             <span className="foot__mails"><a className="mailto" href="mailto:akseli@stuhi.org">akseli@stuhi.org</a><span aria-hidden="true">&middot;</span><a className="mailto" href="mailto:apurva.ganoo@aalto.fi">apurva.ganoo@aalto.fi</a></span>
-            <span>Espoo, Finland</span>
+            <span><a className="mailto" href="/privacy">Privacy notice</a></span>
+              <span>Espoo, Finland</span>
           </div>
         </div>
       </footer>

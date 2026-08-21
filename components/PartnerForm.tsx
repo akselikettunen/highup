@@ -84,6 +84,11 @@ export default function PartnerForm() {
         </p>
       </div>
 
+      <p className="pform__legal">
+        We use your email and company name only to answer you. Details in our{" "}
+        <a className="mailto" href="/privacy">privacy notice</a>.
+      </p>
+
       <p className="pform__note" role="status">
         {sent
           ? `Your mail app should be open with the message ready. If nothing happened, write to ${TO}.`
