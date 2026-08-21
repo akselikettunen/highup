@@ -255,3 +255,28 @@ a.mailto:hover{text-decoration:underline}
 .door--closing{gap:1.4em}
 .door--closing h3{font-size:clamp(1.9rem,5vw,3.5rem);max-width:22ch}
 .door--closing .hero__cta{margin-top:0}
+
+/* ---------- partner box ---------- */
+.pform{display:grid;gap:14px;margin-top:auto}
+.pform__row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:620px){.pform__row{grid-template-columns:1fr}}
+.pform label{display:grid;gap:.5em}
+.pform label span{
+  font-family:var(--display);font-weight:700;font-size:.62rem;
+  letter-spacing:.17em;text-transform:uppercase;color:var(--bone-3);
+}
+.pform input{
+  font-family:var(--body);font-size:1rem;color:var(--bone);
+  background:rgba(11,9,8,.5);
+  border:1px solid var(--hair);border-radius:12px;
+  padding:.85em 1em;width:100%;
+  transition:border-color .18s,background .18s;
+}
+.pform input::placeholder{color:rgba(243,239,225,.3)}
+.pform input:hover{border-color:rgba(243,239,225,.24)}
+.pform input:focus{outline:none;border-color:var(--ember);background:rgba(11,9,8,.72)}
+.pform input:focus-visible{outline:none}
+.pform__foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:.2em}
+.pform__alt{font-size:.92rem;color:var(--bone-2)}
+.pform__note{font-size:.86rem;color:var(--bone-3)}
+.pform button{cursor:pointer;font-family:var(--display)}

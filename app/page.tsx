@@ -1,5 +1,6 @@
 import SunsetSky from "@/components/SunsetSky";
 import Reveal from "@/components/Reveal";
+import PartnerForm from "@/components/PartnerForm";
 
 export default function Page() {
   return (
@@ -13,7 +14,7 @@ export default function Page() {
           <a href="#join">Join</a>
           <a href="#faq">FAQ</a>
         </div>
-        <a className="btn btn--fill btn--sm" href="https://calendar.app.google/y8bj6e39cszaRqpEA" target="_blank" rel="noopener noreferrer">Partner with us
+        <a className="btn btn--fill btn--sm" href="#partner">Partner with us
           <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
         </a>
       </nav>
@@ -33,7 +34,7 @@ export default function Page() {
           </div>
           <h1 className="hero__name">High-Up<span className="bang">!</span></h1>
           <div className="hero__cta">
-            <a className="btn btn--fill btn--lg" href="https://calendar.app.google/y8bj6e39cszaRqpEA" target="_blank" rel="noopener noreferrer">Partner with us
+            <a className="btn btn--fill btn--lg" href="#partner">Partner with us
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </a>
             <a className="btn btn--ghost btn--lg" href="https://stuhi.org/launchpad/app/" target="_blank" rel="noopener noreferrer">Sign up to build
@@ -164,9 +165,7 @@ export default function Page() {
                 <li>Named on the stage that reaches every region of Finland</li>
                 <li>Visibility during the busiest week in Finnish tech</li>
               </ul>
-              <a className="btn btn--fill btn--lg" href="https://calendar.app.google/y8bj6e39cszaRqpEA" target="_blank" rel="noopener noreferrer">Book a call
-                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </a>
+              <PartnerForm />
             </div>
             <div className="door rv" id="students">
               <span className="label">For students &amp; teachers</span>
@@ -230,7 +229,7 @@ export default function Page() {
             <span className="label">Ready?</span>
             <h3>Fire up the next generation of builders in Finland.</h3>
             <div className="hero__cta">
-              <a className="btn btn--fill btn--lg" href="https://calendar.app.google/y8bj6e39cszaRqpEA" target="_blank" rel="noopener noreferrer">Partner with us
+              <a className="btn btn--fill btn--lg" href="#partner">Partner with us
                 <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </a>
               <a className="btn btn--ghost btn--lg" href="https://stuhi.org/launchpad/app/" target="_blank" rel="noopener noreferrer">Sign up to build
