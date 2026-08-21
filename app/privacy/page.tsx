@@ -44,11 +44,18 @@ export default function Privacy() {
 
         <h2>3. How it reaches us</h2>
         <p>
-          The partner box does not submit your details to a server of ours.
-          Pressing Send opens your own email program with the message prefilled,
-          addressed to us; you send it yourself. Your details therefore travel as
-          an ordinary email, through your email provider and ours.{" "}
-          <strong>This website stores nothing you type.</strong>
+          When you press Send, your browser posts the two fields to{" "}
+          <strong>FormSubmit</strong> (formsubmit.co), a form relay that forwards
+          the submission to us by email. It reaches STUHI and is copied to Apurva
+          Ganoo at Aalto University. This website itself runs no server and keeps
+          no database, so the only lasting copies are the emails in our inboxes
+          and whatever the relay retains in transit.
+        </p>
+        <p>
+          FormSubmit operates outside the EU/EEA. If you would rather not use it,
+          email us directly at{" "}
+          <a className="mailto" href="mailto:apurva.ganoo@aalto.fi">apurva.ganoo@aalto.fi</a>{" "}
+          instead of using the form.
         </p>
 
         <h2>4. Why, and on what legal basis</h2>
@@ -74,6 +81,10 @@ export default function Privacy() {
         <h2>6. Who else processes it</h2>
         <ul>
           <li>
+            <strong>FormSubmit</strong> (formsubmit.co) receives what you type in
+            the partner box and forwards it to us by email.
+          </li>
+          <li>
             <strong>Our email providers</strong> handle the message as part of
             delivering and storing email for STUHI and Aalto University.
           </li>
@@ -87,7 +98,7 @@ export default function Privacy() {
           We do not sell or rent your details, and we do not feed them into any
           marketing tool or CRM. Where a provider processes data outside the
           EU/EEA, it does so under the European Commission&rsquo;s standard
-          contractual clauses.
+          contractual clauses or an equivalent safeguard.
         </p>
 
         <h2>7. Cookies and tracking</h2>

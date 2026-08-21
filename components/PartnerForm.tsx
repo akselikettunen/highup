@@ -2,36 +2,66 @@
 
 import { useState } from "react";
 
-const TO = "apurva.ganoo@aalto.fi";
-const CC = "akseli@stuhi.org";
+const APURVA = "apurva.ganoo@aalto.fi";
 
 /**
- * The site is a static export, so there is no endpoint to post to. The box
- * collects the two things worth knowing and hands them to the sender's mail
- * client, prefilled, so nothing is retyped and nothing is lost.
+ * The site is a static export, so the browser posts straight to a form relay
+ * which emails the submission on. No mail client is involved: pressing Send
+ * delivers, and the result is reported in place.
+ *
+ * NEXT_PUBLIC_FORM_TO is the address the relay is registered to. Swapping the
+ * relay later means changing only ENDPOINT.
  */
+const TO = process.env.NEXT_PUBLIC_FORM_TO ?? "akseli@stuhi.org";
+const ENDPOINT = `https://formsubmit.co/ajax/${TO}`;
+
+type State = "idle" | "sending" | "ok" | "error";
+
 export default function PartnerForm() {
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
-  const [sent, setSent] = useState(false);
+  const [state, setState] = useState<State>("idle");
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = `High-Up! partnership — ${company}`;
-    const body = [
-      "Hi Apurva,",
-      "",
-      `We would like to hear more about partnering with High-Up!.`,
-      "",
-      `Company: ${company}`,
-      `Email: ${email}`,
-      "",
-    ].join("\n");
-    window.location.href = `mailto:${TO}?cc=${CC}&subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
-    setSent(true);
+    setState("sending");
+    try {
+      const res = await fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: "Partner application",
+          _cc: APURVA,
+          _captcha: "false",
+          _template: "table",
+          email,
+          company,
+        }),
+      });
+      // The relay answers 200 even when it refuses, so the body decides.
+      const data = await res.json().catch(() => null);
+      if (!res.ok || data?.success !== "true") {
+        throw new Error(data?.message ?? String(res.status));
+      }
+      setState("ok");
+      setEmail("");
+      setCompany("");
+    } catch {
+      setState("error");
+    }
   };
+
+  if (state === "ok") {
+    return (
+      <div className="pform pform--done" role="status">
+        <p className="pform__ok">Sent. We&rsquo;ll be in touch.</p>
+        <p className="pform__legal">
+          Your email and company name went to us and to Apurva at Aalto. Details
+          in our <a className="mailto" href="/privacy">privacy notice</a>.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <form className="pform" onSubmit={submit}>
@@ -46,6 +76,7 @@ export default function PartnerForm() {
             placeholder="you@company.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            disabled={state === "sending"}
           />
         </label>
         <label>
@@ -58,13 +89,14 @@ export default function PartnerForm() {
             placeholder="Company name"
             value={company}
             onChange={(e) => setCompany(e.target.value)}
+            disabled={state === "sending"}
           />
         </label>
       </div>
 
       <div className="pform__foot">
-        <button className="btn btn--fill btn--lg" type="submit">
-          Send
+        <button className="btn btn--fill btn--lg" type="submit" disabled={state === "sending"}>
+          {state === "sending" ? "Sending" : "Send"}
           <svg viewBox="0 0 16 16" aria-hidden="true">
             <path
               d="M2 8h11M9 4l4 4-4 4"
@@ -78,8 +110,8 @@ export default function PartnerForm() {
         </button>
         <p className="pform__alt">
           or message Apurva directly at{" "}
-          <a className="mailto" href={`mailto:${TO}`}>
-            {TO}
+          <a className="mailto" href={`mailto:${APURVA}`}>
+            {APURVA}
           </a>
         </p>
       </div>
@@ -90,8 +122,8 @@ export default function PartnerForm() {
       </p>
 
       <p className="pform__note" role="status">
-        {sent
-          ? `Your mail app should be open with the message ready. If nothing happened, write to ${TO}.`
+        {state === "error"
+          ? `That did not go through. Please write to ${APURVA} instead.`
           : ""}
       </p>
     </form>

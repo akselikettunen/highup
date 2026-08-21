@@ -279,6 +279,10 @@ a.mailto:hover{text-decoration:underline}
 .pform__foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:.2em}
 .pform__alt{font-size:.92rem;color:var(--bone-2)}
 .pform__legal{font-size:.82rem;color:var(--bone-3);max-width:52ch}
+.pform--done{gap:.7em;margin-top:auto}
+.pform__ok{font-family:var(--display);font-weight:700;font-size:clamp(1.15rem,1.8vw,1.45rem);letter-spacing:-.02em;color:var(--bone)}
+.pform button[disabled]{opacity:.6;cursor:progress}
+.pform input[disabled]{opacity:.6}
 .pform__note{font-size:.86rem;color:var(--bone-3)}
 .pform__note:empty{display:none}
 .pform button{cursor:pointer;font-family:var(--display)}
