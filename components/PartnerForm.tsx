@@ -87,17 +87,7 @@ export default function PartnerForm() {
       <p className="pform__note" role="status">
         {sent
           ? `Your mail app should be open with the message ready. If nothing happened, write to ${TO}.`
-          : "Prefer to talk? "}
-        {!sent && (
-          <a
-            className="mailto"
-            href="https://calendar.app.google/y8bj6e39cszaRqpEA"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Book a call instead
-          </a>
-        )}
+          : ""}
       </p>
     </form>
   );

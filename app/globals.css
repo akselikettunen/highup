@@ -279,6 +279,7 @@ a.mailto:hover{text-decoration:underline}
 .pform__foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:.2em}
 .pform__alt{font-size:.92rem;color:var(--bone-2)}
 .pform__note{font-size:.86rem;color:var(--bone-3)}
+.pform__note:empty{display:none}
 .pform button{cursor:pointer;font-family:var(--display)}
 
 /* ---------- partners wall ---------- */
